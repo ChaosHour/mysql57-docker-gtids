@@ -13,6 +13,11 @@ RUN set -ex; \
     useradd -u 1001 -r -g 1001 -s /sbin/nologin \
         -c "Default Application User" mysql
 
+# install GNUGPG
+RUN set -ex; \
+microdnf -y install gnupg2; \
+microdnf clean all
+
 # check repository package signature in secure way
 RUN set -ex; \
     export GNUPGHOME="$(mktemp -d)"; \

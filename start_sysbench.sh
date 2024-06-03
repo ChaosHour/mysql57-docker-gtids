@@ -9,7 +9,7 @@
 #done
 
 # Create and call a stored procedure to drop existing tables
-docker exec -it mysql57-docker-primary-1 mysql -u root -ps3cr3t -e "
+docker exec -it mysql57-docker-gtids-primary-1 mysql -u root -ps3cr3t -e "
 USE sbtest;
 DROP PROCEDURE IF EXISTS drop_tables;
 DELIMITER $$
